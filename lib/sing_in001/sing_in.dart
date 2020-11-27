@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SingIn extends StatefulWidget {
+class SingIn001 extends StatefulWidget {
   @override
-  _SingInState createState() => _SingInState();
+  _SingIn001State createState() => _SingIn001State();
 }
 
-class _SingInState extends State<SingIn> {
+class _SingIn001State extends State<SingIn001> {
   GlobalKey _keyForm = GlobalKey();
 
   @override
