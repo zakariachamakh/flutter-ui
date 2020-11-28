@@ -99,7 +99,7 @@ class _SingIn002State extends State<SingIn002> {
 
   Widget _form(BuildContext context) {
     UnderlineInputBorder _borderStyle = UnderlineInputBorder(
-      borderSide: BorderSide(color: Colors.grey.shade50, width: 0.3),
+      borderSide: BorderSide(color: Colors.grey.shade50, width: 0.4),
     );
     TextStyle _hindColor = TextStyle(color: Colors.white);
 
@@ -108,7 +108,7 @@ class _SingIn002State extends State<SingIn002> {
       child: Column(
         children: [
           TextFormField(
-            style: TextStyle(color: Colors.redAccent),
+            style: TextStyle(color: Colors.grey.shade50),
             cursorColor: Colors.redAccent,
             decoration: InputDecoration(
               hintText: 'User name',
@@ -126,6 +126,7 @@ class _SingIn002State extends State<SingIn002> {
           ),
           TextFormField(
             obscureText: true,
+            style: TextStyle(color: Colors.grey.shade50),
             cursorColor: Colors.redAccent,
             decoration: InputDecoration(
               hintText: 'Password ',
