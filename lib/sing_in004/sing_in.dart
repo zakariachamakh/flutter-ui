@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class SingIn003 extends StatefulWidget {
+class SingIn004 extends StatefulWidget {
   @override
-  _SingIn003State createState() => _SingIn003State();
+  _SingIn004State createState() => _SingIn004State();
 }
 
-class _SingIn003State extends State<SingIn003> {
+class _SingIn004State extends State<SingIn004> {
   GlobalKey _keyForm = GlobalKey();
 
   @override
@@ -18,27 +19,17 @@ class _SingIn003State extends State<SingIn003> {
           decoration: BoxDecoration(
               gradient: LinearGradient(
             colors: [
-              Color(0xFFFF8960),
-              Color(0xFFFF62A5),
-              Color(0xFFFF62A5),
+              Color(0xFFB739F3),
+              Color(0xFF6950FB),
             ],
             stops: [
               0.1,
-              0.8,
               0.9,
             ],
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
           )),
         ),
-        Scaffold(
-            backgroundColor: Colors.transparent,
-            appBar: AppBar(
-              backgroundColor: Colors.transparent,
-              elevation: 0.0,
-              toolbarHeight: 0.0,
-            ),
-            body: _sign(context)),
         Theme(
           data: ThemeData(
             fontFamily: 'SFUIDisplay',
@@ -50,33 +41,68 @@ class _SingIn003State extends State<SingIn003> {
               elevation: 0.0,
             ),
             body: SingleChildScrollView(
-              child: Container(
-                alignment: Alignment.topRight,
-                margin: EdgeInsets.symmetric(horizontal: 18, vertical: 56),
-                padding: EdgeInsets.all(24),
-                height: MediaQuery.of(context).size.height * 0.6,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15),
-                  ),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black38.withOpacity(0.2),
-                      spreadRadius: 3,
-                      blurRadius: 7,
-                      offset: Offset(0, 3), // changes position of shadow
+              child: Column(
+                children: [
+                  Container(
+                    alignment: Alignment.topRight,
+                    margin: EdgeInsets.symmetric(horizontal: 18, vertical: 56),
+                    padding: EdgeInsets.all(24),
+                    height: MediaQuery.of(context).size.height * 0.6,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(15),
+                      ),
+                      color: Colors.white,
                     ),
-                  ],
-                ),
-                child: Column(
-                  children: [
-                    _title(context),
-                    _form(context),
-                    _action(context),
-                  ],
-                ),
+                    child: Column(
+                      children: [
+                        _title(context),
+                        _form(context),
+                        _action(context),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconButton(
+                        icon: FaIcon(
+                          FontAwesomeIcons.facebook,
+                          size: 48,
+                          color: Colors.blueAccent,
+                        ),
+                        onPressed: () {},
+                      ),
+                      SizedBox(
+                        width: 24,
+                      ),
+                      IconButton(
+                        icon: FaIcon(
+                          FontAwesomeIcons.twitter,
+                          size: 48,
+                          color: Colors.lightBlue,
+                        ),
+                        onPressed: () {},
+                      ),
+                      SizedBox(
+                        width: 24,
+                      ),
+                      IconButton(
+                        icon: FaIcon(
+                          FontAwesomeIcons.googlePlusG,
+                          size: 48,
+                          color: Colors.redAccent,
+                        ),
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 56,
+                  ),
+                ],
               ),
             ),
           ),
@@ -185,24 +211,6 @@ class _SingIn003State extends State<SingIn003> {
     return Column(
       children: [
         SizedBox(
-          height: 18,
-        ),
-        Align(
-          alignment: Alignment.centerRight,
-          child: InkWell(
-            onTap: () {},
-            child: Text(
-              'Forgot your password?',
-              style: TextStyle(
-                color: Colors.grey.shade500,
-                fontWeight: FontWeight.w100,
-                letterSpacing: 1.3,
-                fontSize: 16,
-              ),
-            ),
-          ),
-        ),
-        SizedBox(
           height: 24,
         ),
         InkWell(
@@ -226,8 +234,8 @@ class _SingIn003State extends State<SingIn003> {
               ),
               gradient: LinearGradient(
                 colors: [
-                  Color(0xFFFF8960),
-                  Color(0xFFFF62A5),
+                  Color(0xFFB739F3),
+                  Color(0xFF6950FB),
                 ],
                 begin: Alignment.centerRight,
                 end: Alignment.centerLeft,
@@ -235,60 +243,22 @@ class _SingIn003State extends State<SingIn003> {
             ),
           ),
         ),
-      ],
-    );
-  }
-
-  Widget _sign(BuildContext context) {
-    return Transform.translate(
-      offset: Offset(0, MediaQuery.of(context).size.height * 0.38),
-      child: Container(
-        alignment: Alignment.bottomCenter,
-        margin: EdgeInsets.all(28),
-        padding: EdgeInsets.all(24),
-        height: MediaQuery.of(context).size.height * 0.4,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(
-            Radius.circular(15),
+        SizedBox(
+          height: 24,
+        ),
+        InkWell(
+          onTap: () {},
+          child: Text(
+            'Forgot your password?',
+            style: TextStyle(
+              color: Colors.grey.shade500,
+              fontWeight: FontWeight.w100,
+              letterSpacing: 1.3,
+              fontSize: 16,
+            ),
           ),
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black38.withOpacity(0.2),
-              spreadRadius: 3,
-              blurRadius: 7,
-              offset: Offset(0, 3), // changes position of shadow
-            ),
-          ],
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "Don't have an account ?",
-              style: TextStyle(
-                color: Colors.grey.shade400,
-                fontSize: 17,
-                letterSpacing: 1.1,
-              ),
-            ),
-            SizedBox(
-              width: 8,
-            ),
-            InkWell(
-              onTap: () {},
-              child: Text(
-                'Sing up',
-                style: TextStyle(
-                    color: Color(0xFFFF8960),
-                    fontSize: 17,
-                    fontWeight: FontWeight.w400),
-              ),
-            ),
-          ],
-        ),
-      ),
+      ],
     );
   }
 }
