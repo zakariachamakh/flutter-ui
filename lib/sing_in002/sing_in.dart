@@ -17,7 +17,7 @@ class _SingIn002State extends State<SingIn002> {
       child: Stack(
         children: [
           Image.asset(
-            'assets/images/bg.jpg',
+            'assets/images/bg1.jpg',
             fit: BoxFit.cover,
             height: MediaQuery.of(context).size.height,
             width: double.infinity,
