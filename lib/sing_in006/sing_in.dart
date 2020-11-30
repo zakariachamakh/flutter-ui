@@ -9,11 +9,13 @@ class SingIn006 extends StatefulWidget {
 
 class _SingIn006State extends State<SingIn006> {
   VideoPlayerController _controller;
+  bool isPaused;
   GlobalKey _keyForm;
 
   @override
   void initState() {
     super.initState();
+    isPaused = false;
     _keyForm = GlobalKey();
     _controller = VideoPlayerController.asset('assets/videos/Boxing.mp4')
       ..initialize().then((_) {
@@ -42,6 +44,32 @@ class _SingIn006State extends State<SingIn006> {
                 width: _controller.value.size?.width ?? 0,
                 height: _controller.value.size?.height ?? 0,
                 child: VideoPlayer(_controller),
+              ),
+            ),
+          ),
+          Transform.translate(
+            offset: Offset(-12, MediaQuery.of(context).size.height * 0.15),
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: IconButton(
+                icon: Icon(
+                  Icons.pause_circle_outline,
+                  color: Colors.white.withOpacity(0.2),
+                  size: 72,
+                ),
+                onPressed: () {
+                  if (!isPaused) {
+                    _controller.pause();
+                    setState(() {
+                      isPaused = true;
+                    });
+                  } else {
+                    _controller.play();
+                    setState(() {
+                      isPaused = false;
+                    });
+                  }
+                },
               ),
             ),
           ),
