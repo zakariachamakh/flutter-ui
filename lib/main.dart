@@ -1,5 +1,6 @@
 import 'package:codecamp002/sing_in002/sing_in.dart';
 import 'package:codecamp002/sing_in004/sing_in.dart';
+import 'package:codecamp002/sing_in006/sing_in.dart';
 import 'package:flutter/material.dart';
 
 import 'sing_in003/sing_in.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter bootcamp',
-      home: SingIn005(),
+      home: SingIn006(),
     );
   }
 }
