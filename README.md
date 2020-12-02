@@ -17,5 +17,5 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
-# *** Awesome flutter Sign-in UI
+# ***Awesome flutter Sign-in UI
 ![the screens](https://github.com/zakariachamakh/flutter-ui/blob/master/assets/Screenshot.png)
